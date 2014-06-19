@@ -369,7 +369,7 @@ $foo->bar(
 
 Управляющая структура `if` должна выглядеть, так, как показано. Обратите внимание
 на размещение круглых скобок, пробелов и фигурных скобок; так-же обратите внимание,
-что `else` и `elseif` находятся на той же линии, что закрывающая фигурная скобка предыдущего тела.
+что `else` и `elseif` находятся на той же линии, что закрывающая фигурная скобка предыдущего тела:
 
 ```php
 <?php
@@ -382,17 +382,17 @@ if ($expr1) {
 }
 ```
 
-Ключевое слово `elseif` СЛЕДУЕТ использовать вместо `else if` так чтобы все ключевые слова
-выглядели, как отдельные слова.
+Ключевое слово `elseif` СЛЕДУЕТ использовать вместо `else if` так чтобы не было ключевых слов,
+состоящих более, чем из одного слова.
 
 
 ### 5.2. `switch`, `case`
 
-A `switch` structure looks like the following. Note the placement of
-parentheses, spaces, and braces. The `case` statement НЕОБХОДИМО be indented once
-from `switch`, and the `break` keyword (or other terminating keyword) НЕОБХОДИМО be
-indented at the same level as the `case` body. There НЕОБХОДИМО be a comment such as
-`// no break` when fall-through is intentional in a non-empty `case` body.
+Управляющая структура `switch` должна выглядеть так, как показано ниже. Обратите внимание на
+расположение круглых скобок, пробелов и фигурных скобок. Для выражений `case` НЕОБХОДИМО
+делать один отступ от `switch`. Ключевое слово `break` (как и любое другие прерывающее ключевое слово)
+НЕОБХОДИМО размещать на том же уровне, что и тело `case`. НЕОБХОДИМО добавлять коментарий в тело непустых
+выражений `case` если они не имеют прерывающих ключевых слов, например `// нет остановки`.
 
 ```php
 <?php
@@ -402,7 +402,7 @@ switch ($expr) {
         break;
     case 1:
         echo 'Second case, which falls through';
-        // no break
+        // нет остановки
     case 2:
     case 3:
     case 4:
@@ -417,110 +417,107 @@ switch ($expr) {
 
 ### 5.3. `while`, `do while`
 
-A `while` statement looks like the following. Note the placement of
-parentheses, spaces, and braces.
+Выражение `while` должно выглядеть, как показано ниже. Обратите внимание на расположение
+скобок и пробелов:
 
 ```php
 <?php
 while ($expr) {
-    // structure body
+    // тело структуры
 }
 ```
 
-Similarly, a `do while` statement looks like the following. Note the placement
-of parentheses, spaces, and braces.
+Выражение `do while` должно выглядеть, как показано ниже. Обратите внимание на расположение
+скобок и пробелов:
 
 ```php
 <?php
 do {
-    // structure body;
+    // тело структуры
 } while ($expr);
 ```
 
 ### 5.4. `for`
 
-A `for` statement looks like the following. Note the placement of parentheses,
-spaces, and braces.
+Выражение `for` должно выглядеть, как показано ниже. Обратите внимание на расположение
+скобок и пробелов:
 
 ```php
 <?php
 for ($i = 0; $i < 10; $i++) {
-    // for body
+    // тело for
 }
 ```
 
 ### 5.5. `foreach`
     
-A `foreach` statement looks like the following. Note the placement of
-parentheses, spaces, and braces.
+Выражение `foreach` должно выглядеть, как показано ниже. Обратите внимание на расположение
+скобок и пробелов:
 
 ```php
 <?php
 foreach ($iterable as $key => $value) {
-    // foreach body
+    // тело foreach
 }
 ```
 
 ### 5.6. `try`, `catch`
 
-A `try catch` block looks like the following. Note the placement of
-parentheses, spaces, and braces.
+Блок `try catch` должен выглядеть, как показано ниже. Обратите внимание на расположение
+скобок и пробелов:
 
 ```php
 <?php
 try {
-    // try body
+    // тело try
 } catch (FirstExceptionType $e) {
-    // catch body
+    // тело catch
 } catch (OtherExceptionType $e) {
-    // catch body
+    // тело catch
 }
 ```
 
-6. Closures
------------
+6. Замыкания
+------------
 
-Closures НЕОБХОДИМО be declared with a space after the `function` keyword, and a
-space before and after the `use` keyword.
+Замыкания НЕОБХОДИМО объявлять с одним пробелом после ключевого слова `function`, а так-же
+с пробелом до и после ключевого слова `use`.
 
-The opening brace НЕОБХОДИМО go on the same line, and the closing brace НЕОБХОДИМО go on
-the next line following the body.
+Открывающую фигурную скобку НЕОБХОДИМО рахмещать на следующей строке, а закрывающую — 
+на следующей строке после тела замыкания.
 
-There НЕДОПУСТИМО be a space after the opening parenthesis of the argument list
-or variable list, and there НЕДОПУСТИМО be a space before the closing parenthesis
-of the argument list or variable list.
+После открывающей круглой списка аргументов или списка переменных скобки НЕДОПУСТИМО ставить пробел,
+и так же НЕДОПУСТИМО ставить пробел перед закрывающей круглой скобкой.
 
-In the argument list and variable list, there НЕДОПУСТИМО be a space before each
-comma, and there НЕОБХОДИМО be one space after each comma.
+В списке аргументов и списке переменных НЕДОПУСТИМО ставить пробелы перед запятыми, и НЕОБХОДИМО
+ставить один пробел после каждой запятой.
 
-Closure arguments with default values НЕОБХОДИМО go at the end of the argument
-list.
+Аргументы замыкания со значениями по умолчанию НЕОБХОДИМО размещать в конце списка аргументов.
 
-A closure declaration looks like the following. Note the placement of
-parentheses, commas, spaces, and braces:
+Объявление замыкания должно выглядеть, как показано ниже. Обратите внимание на расположение
+скобок, запятых и пробелов:
 
 ```php
 <?php
 $closureWithArgs = function ($arg1, $arg2) {
-    // body
+    // тело замыкания
 };
 
 $closureWithArgsAndVars = function ($arg1, $arg2) use ($var1, $var2) {
-    // body
+    // тело замыкания
 };
 ```
 
-Argument lists and variable lists ВОЗМОЖНО be split across multiple lines, where
-each subsequent line is indented once. When doing so, the first item in the
-list НЕОБХОДИМО be on the next line, and there НЕОБХОДИМО be only one argument or variable
-per line.
+Список аргументов и переменных ВОЗМОЖНО разделить на несколько строк, в таком случае, каждая строка
+записывается с одним отступом. При этом первый элемент списка НЕОБХОДИМО размещать на новой
+строке, и НЕОБХОДИМО записывать не более одного аргумента или переменной на строку.
 
-When the ending list (whether or arguments or variables) is split across
-multiple lines, the closing parenthesis and opening brace НЕОБХОДИМО be placed
-together on their own line with one space between them.
+Когда конец списка (в независимости от того аргументы это, или переменные) разделен на несколько
+строк, закрывающую круглую скобу и открывающую фигурную НЕОБХОДИМО расположить вместе на отдельной
+линии с одним пробелом между ними.
 
-The following are examples of closures with and without argument lists and
-variable lists split across multiple lines.
+иже приведены примеры замыканий со списком аргументов и без него, а так-же с разделением списка
+переменных на несколько строк.
 
 ```php
 <?php
@@ -529,7 +526,7 @@ $longArgs_noVars = function (
     $longerArgument,
     $muchLongerArgument
 ) {
-   // body
+    // тело замыкания
 };
 
 $noArgs_longVars = function () use (
@@ -537,7 +534,7 @@ $noArgs_longVars = function () use (
     $longerVar2,
     $muchLongerVar3
 ) {
-   // body
+    // тело замыкания
 };
 
 $longArgs_longVars = function (
@@ -549,7 +546,7 @@ $longArgs_longVars = function (
     $longerVar2,
     $muchLongerVar3
 ) {
-   // body
+    // тело замыкания
 };
 
 $longArgs_shortVars = function (
@@ -557,7 +554,7 @@ $longArgs_shortVars = function (
     $longerArgument,
     $muchLongerArgument
 ) use ($var1) {
-   // body
+    // тело замыкания
 };
 
 $shortArgs_longVars = function ($arg) use (
@@ -565,56 +562,55 @@ $shortArgs_longVars = function ($arg) use (
     $longerVar2,
     $muchLongerVar3
 ) {
-   // body
+    // тело замыкания
 };
 ```
 
-Note that the formatting rules also apply when the closure is used directly
-in a function or method call as an argument.
+Обратите внимание, что правила форматирования также сохраняются, когда замыкания используются
+непосредственно в вызове функции или метода в качестве аргумента.
 
 ```php
 <?php
 $foo->bar(
     $arg1,
     function ($arg2) use ($var1) {
-        // body
+        // тело замыкания
     },
     $arg3
 );
 ```
 
 
-7. Conclusion
---------------
+7. Вывод
+--------
 
-There are many elements of style and practice intentionally omitted by this
-guide. These include but are not limited to:
+Есть очень много элементов стиля и практики, которые намеренно опущены в этом руководстве.
+Они включают, но не ограничиваются:
 
-- Declaration of global variables and global constants
+- Объявление глобальных переменных и констант
 
-- Declaration of functions
+- Объявление функций
 
-- Operators and assignment
+- Операторы и присваивание
 
-- Inter-line alignment
+- Выравнивание
 
-- Comments and documentation blocks
+- Комментарии и документация блоков
 
-- Class name prefixes and suffixes
+- Преффиксы и суффиксы названий классов
 
-- Best practices
+- Лучшие практики
 
-Future recommendations ВОЗМОЖНО revise and extend this guide to address those or
-other elements of style and practice.
+ВОЗМОЖНО в будущем руководство будет пересмотрено или расширено для решения тех или иных элементов стиля и практики.
 
 
 Appendix A. Survey
 ------------------
 
-In writing this style guide, the group took a survey of member projects to
-determine common practices.  The survey is retained herein for posterity.
+При написании этого руководства, группа провела опрос представителей проектов чтобы определить общие практики.
+Результаты сохраним здесь для потомков.
 
-### A.1. Survey Data
+### A.1. Данные опроса
 
     url,http://www.horde.org/apps/horde/docs/CODING_STANDARDS,http://pear.php.net/manual/en/standards.php,http://solarphp.com/manual/appendix-standards.style,http://framework.zend.com/manual/en/coding-standard.html,http://symfony.com/doc/2.0/contributing/code/standards.html,http://www.ppi.io/docs/coding-standards.html,https://github.com/ezsystems/ezp-next/wiki/codingstandards,http://book.cakephp.org/2.0/en/contributing/cakephp-coding-conventions.html,https://github.com/UnionOfRAD/lithium/wiki/Spec%3A-Coding,http://drupal.org/coding-standards,http://code.google.com/p/sabredav/,http://area51.phpbb.com/docs/31x/coding-guidelines.html,https://docs.google.com/a/zikula.org/document/edit?authkey=CPCU0Us&hgd=1&id=1fcqb93Sn-hR9c0mkN6m_tyWnmEvoswKBtSc0tKkZmJA,http://www.chisimba.com,n/a,https://github.com/Respect/project-info/blob/master/coding-standards-sample.php,n/a,Object Calisthenics for PHP,http://doc.nette.org/en/coding-standard,http://flow3.typo3.org,https://github.com/propelorm/Propel2/wiki/Coding-Standards,http://developer.joomla.org/coding-standards.html
     voting,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,no,no,no,?,yes,no,yes
@@ -640,72 +636,72 @@ determine common practices.  The survey is retained herein for posterity.
     blank_line_after_php,no,no,no,no,yes,no,no,no,no,yes,yes,no,no,yes,?,yes,yes,no,yes,no,yes,no
     class_method_control_brace,next/next/same,next/next/same,next/next/same,next/next/same,next/next/same,same/same/same,next/next/next,same/same/same,same/same/same,same/same/same,same/same/same,next/next/next,next/next/same,next/same/same,next/next/next,next/next/same,next/next/same,next/next/same,next/next/same,same/same/same,next/next/same,next/next/next
 
-### A.2. Survey Legend
+### A.2. Расшифровка опроса
 
 `indent_type`:
-The type of indenting. `tab` = "Use a tab", `2` or `4` = "number of spaces"
+Тип отступа. `tab` = "символ табуляции", `2` или `4` = "число пробелов"
 
 `line_length_limit_soft`:
-The "soft" line length limit, in characters. `?` = not discernible or no response, `no` means no limit.
+Мягкие ограничения на длину строки, в символах. `?` = воздержались от ответа, `no` — без ограничений.
 
 `line_length_limit_hard`:
-The "hard" line length limit, in characters. `?` = not discernible or no response, `no` means no limit.
+Жесткие ограничения на длину строки, в символах. `?` = воздержались от ответа, `no` — без ограничений.
 
 `class_names`:
-How classes are named. `lower` = lowercase only, `lower_under` = lowercase with underscore separators, `studly` = StudlyCase.
+Как именовать классы? `lower` = только в нижнем регистре, `lower_under` = в нижнем регистре с символами нижнего подчёркивания для разделения слов, `studly` = StudlyCase.
 
 `class_brace_line`:
-Does the opening brace for a class go on the `same` line as the class keyword, or on the `next` line after it?
+Размещение открывающей фигурной скобки для классов. `same` — на той же строке, `next` — на следующей.
 
 `constant_names`:
-How are class constants named? `upper` = Uppercase with underscore separators.
+Как именовать константы? `upper` = в верхнем регистре с символами нижнего подчёркивания для разделения слов.
 
 `true_false_null`:
-Are the `true`, `false`, and `null` keywords spelled as all `lower` case, or all `upper` case?
+Константы `true`, `false` и `null`. `lower` — в нижнем регистре, `upper` — в верхнем?
 
 `method_names`:
-How are methods named? `camel` = `camelCase`, `lower_under` = lowercase with underscore separators.
+Как именовать методы? `camel` = `camelCase`, `lower_under` = в нижнем регистре с символами нижнего подчёркивания для разделения слов.
 
 `method_brace_line`:
-Does the opening brace for a method go on the `same` line as the method name, or on the `next` line?
+Размещение открывающей фигурной скобки для методов. `same` — на той же строке, `next` — на следующей.
 
 `control_brace_line`:
-Does the opening brace for a control structure go on the `same` line, or on the `next` line?
+Размещение открывающей фигурной скобки для управляющих структур. `same` — на той же строке, `next` — на следующей.
 
 `control_space_after`:
-Is there a space after the control structure keyword?
+Нужно ли ставить пробел после ключевого слово управляющей структуры?
 
 `always_use_control_braces`:
-Do control structures always use braces?
+Всегда ли управляющие структуры должны использовать фигурные скобки?
 
 `else_elseif_line`:
-When using `else` or `elseif`, does it go on the `same` line as the previous closing brace, or does it go on the `next` line?
+Как записывать структуры `else` и `elseif`? `same` — на той же строке, что и закрывающая фигурная скобка, `next` — на следующей строке.
 
 `case_break_indent_from_switch`:
-How many times are `case` and `break` indented from an opening `switch` statement?
+Сколько отступов от `switch` делать для `case` и `break`?
 
 `function_space_after`:
-Do function calls have a space after the function name and before the opening parenthesis?
+Ставить ли пробел после имени функции и перед открывающей круглой скобкой?
 
 `closing_php_tag_required`:
-In files containing only PHP, is the closing `?>` tag required?
+Ставить ли в файлах, содержащих только PHP, закрывающий тег `?>`?
 
 `line_endings`:
-What type of line ending is used?
+Какой тип окончания строки использовать?
 
 `static_or_visibility_first`:
-When declaring a method, does `static` come first, or does the visibility come first?
+Что следует первым при определении метода — `static` или область видимости?
 
 `control_space_parens`:
-In a control structure expression, is there a space after the opening parenthesis and a space before the closing parenthesis? `yes` = `if ( $expr )`, `no` = `if ($expr)`.
+Ставить ли внутренние пробелы для круглых скобок управляющих конструкций? `yes` = `if ( $expr )`, `no` = `if ($expr)`.
 
 `blank_line_after_php`:
-Is there a blank line after the opening PHP tag?
+Оставлять ли пустую строку после открывающего тега PHP?
 
 `class_method_control_brace`:
-A summary of what line the opening braces go on for classes, methods, and control structures.
+На какой строке ставить открывающую фигурную скобку для классов, методов и управляющих структур?
 
-### A.3. Survey Results
+### A.3. Результаты опроса
 
     indent_type:
         tab: 7
