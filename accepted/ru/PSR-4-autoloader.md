@@ -65,5 +65,5 @@ PSR-4 описывает спецификацию для [автозагрузк
 
 [RFC 2119]: http://rfc2.ru/2119.rfc/print
 [автозагрузки]: http://php.net/autoload
-[PSR-0]: https://github.com/php-fig/fig-standards/blob/master/accepted/ru/PSR-0.md
-[здесь]: https://github.com/php-fig/fig-standards/blob/master/accepted/ru/PSR-4-autoloader-examples.md
+[PSR-0]: PSR-0.md
+[здесь]: PSR-4-autoloader-examples.md
